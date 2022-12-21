@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //创建Symbol  函数
+    let s = Symbol()
+    // console.log(s)
+    let s2 = Symbol('哈哈')
+    let s3 = Symbol('哈哈')
+    //Symbol.for创建  函数对象
+    let s4 = Symbol.for('哈哈')
+    // console.log(s2 === s3)
+    console.log(s4, typeof s4)
+
+    //不能与其他数据进行运算
+    // let result = s + 100
+    // let result = s > 100
+    // let result = s + s
+
+    // JS 数据类型  USONB
+    // u  undefined
+    // s  string symbol
+    // o  object
+    // n  null number
+    // b  boolean
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //声明 数组
+    const xy = ['唐僧','孙悟空','猪八戒','沙僧']
+
+    //for of 迭代值，  for in 迭代索引
+    // for (let v of xy) {
+    //     console.log(v)
+    // }
+
+    let iterator = xy[Symbol.iterator]();
+
+    //调用对象的next方法
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+
+    //工作原理
+    //1）创建一个指针对象，指向当前数据结构的起始位置
+    //2）第一次调用对象的next方法，指针自动指向数据结构的第一个成员
+    //3）接下来不断调用next方法，指针一直往后移动，直到指向最后一个成员
+    //4）每调用next方法返回一个包含value和done属性的对象
+
+</script>
+</html>

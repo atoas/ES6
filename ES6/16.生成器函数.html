@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //生成器其实是一个特殊的函数
+    //异步编程  纯回调函数  node  fs  ajax  mongdb
+    //函数代码的分隔符
+    // function * gen(){
+    //     console.log(111);
+    //     yield 'javascript'
+    //     console.log(11)
+    //     console.log(222);
+    //     yield 'python'
+    //     console.log(333);
+    //     yield 'c++'
+    //     console.log(444);
+    // }
+
+    // let iterations = gen();
+    // console.log(iterations.next())
+    // console.log(iterations.next())
+    // console.log(iterations.next())
+    // console.log(iterations.next())
+
+    // for (let v of iterations) {
+    //     console.log(v)
+    // }
+
+
+    //B.生成器函数的参数传递
+    function * gen(arg){
+        console.log(arg)
+        let one = yield 111
+        console.log(one)
+        let two = yield 222
+        console.log(two)
+        let three = yield 333
+        console.log(three)
+    }
+
+    //执行获取迭代器对象
+    let iterations = gen('AAA')
+    console.log(iterations.next())
+    //next方法可以传入实参
+    console.log(o=iterations.next('BBB'))  //是第一个 yield 语句整体的返回结果
+    console.log(o=iterations.next('ccc'))
+    console.log(o=iterations.next('ddd'))
+
+
+</script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    //异步编程  文件操作  网络操作（ajax ， request）  数据库操作
+    // setTimeout(()=>{
+    //     console.log(111)
+    //     setTimeout(()=>{
+    //         console.log(222)
+    //         setTimeout(()=>{
+    //             console.log(333)
+    //         },3000)
+    //     },2000)
+    // },1000)
+
+    //A。
+    /*
+    function one(){
+        setTimeout(()=>{
+            console.log(111)
+            iterations.next()
+        },1000)
+    }
+
+    function two(){
+        setTimeout(()=>{
+            console.log(222)
+            iterations.next()
+        },1000)
+    }
+
+    function three(){
+        setTimeout(()=>{
+            console.log(333)
+            iterations.next()
+        },1000)
+    }
+
+    function * gen(){
+        yield one()
+        yield two()
+        yield three()
+    }
+
+    //调用生成器函数
+    let iterations = gen()
+    iterations.next()*/
+    
+    //B。
+    //模拟获取  用户数据  订单数据  商品数据
+    function getUsers () {
+        setTimeout(()=>{
+            let data = '用户数据'
+            //调用 next 方法，并且将数据传入
+            iterations.next(data);
+        },1000)
+    }
+    function getOrders () {
+        setTimeout(()=>{
+            let data = '订单数据'
+            //调用 next 方法，并且将数据传入
+            iterations.next(data);
+        },1000)
+    }
+    function getGoods () {
+        setTimeout(()=>{
+            let data = '商品数据'
+            //调用 next 方法，并且将数据传入
+            iterations.next(data);
+        },1000)
+    }
+    
+    function * fn () {
+        let users = yield getUsers();
+        console.log(users)
+        let orders = yield getOrders();
+        console.log(orders)
+        let goods = yield getGoods()
+        console.log(goods)
+    }
+
+    //调用生成器函数
+    let iterations = fn()
+    iterations.next()
+</script>
+</html>

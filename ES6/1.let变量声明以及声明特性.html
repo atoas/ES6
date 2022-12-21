@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //
+    let a;
+    let b, c, d;
+    let e;
+    let f = 200, g = 'sdadad', h = [];
+
+    //1.变量不能重复声明
+    // let ss = 'adsd'
+    // let ss = 'ds'
+
+    //2.块级作用域  全局  函数  eval
+    {
+        let girl = 'aa';
+    }
+    // console.log(girl)  //报错
+
+    //3.不存在变量提升
+    // console.log(song)
+    // let song = 'wing'  //报错
+
+    // 4.不影响作用链
+    {
+
+        let sc = 'aa'
+
+        function ff () {
+            console.log(sc)
+        }
+
+        ff();
+    }
+</script>
+</html>

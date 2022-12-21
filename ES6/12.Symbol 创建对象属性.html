@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //向对象中添加方法 up down
+    let game = {
+        name: "Game",
+        up:function (){
+            console.log('hahhh')
+        },
+        down:function (){
+            console.log('aaaa')
+        }
+    }
+
+    //声明一个对象
+    // let methods = {
+    //     up:Symbol(),
+    //     down:Symbol()
+    // }
+    //
+    // game[methods.up] = function () {
+    //     console.log("我可以改变形状")
+    // }
+    //
+    // game[methods.down] = function () {
+    //     console.log("我可以")
+    // }
+    //
+    // console.log(game)
+
+    let youxi = {
+        name: 'lol',
+        [Symbol('say')]:function () {
+            console.log('i can say')
+        },
+        [Symbol('zibao')]:function () {
+            console.log('i can explode')
+        },
+    }
+
+    console.log(youxi)
+</script>
+</html>
