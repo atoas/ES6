@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getter and setter</title>
+</head>
+<body>
+<script>
+    class Phone {
+        get price() {
+            console.log('价格属性被读取了！！！')
+            return 'you'
+        }
+
+        set price(newVal) {
+            console.log('价格被修改了！！！')
+        }
+    }
+
+    let phone = new Phone();
+    console.log(phone.price)
+    phone.price = 'free'
+</script>
+</body>
+</html>

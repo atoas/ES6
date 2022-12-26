@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>set</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 2, 3, 5, 4]
+    // 1. 数组去重
+    const result = [...new Set(arr)]
+    console.log(result);
+
+    // 2. 交集
+    let arr2 = [3, 4, 5, 5, 6]
+    console.log(result.filter(iterm => {
+        let numbers = new Set(arr2);
+        return numbers.has(iterm);
+    }));
+
+    // 3. 并集
+    let result2 = [...new Set([...arr, ...arr2])];
+    console.log(result2);
+
+    // 4. 差集
+    console.log(result.filter(iterm => {
+        let set = new Set(arr2);
+        return !set.has(iterm)
+    }));
+
+</script>
+</body>
+</html>

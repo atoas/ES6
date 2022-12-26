@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map</title>
+</head>
+<body>
+<script>
+    let m = new Map();
+    m.set('name', 'Jack')
+    m.set('change', () => {
+        console.log('我们可以一起玩耍！')
+    })
+
+    let key = {
+        course: 'math'
+    }
+
+    m.set(key, ['高数', '现代'])
+
+    console.log(m)
+    console.log(m.size)
+
+    m.delete('name')
+    console.log(m)
+
+    console.log(m.get(key))
+
+    m.clear()
+    console.log(m);
+
+</script>
+</body>
+</html>

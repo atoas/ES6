@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class2</title>
+</head>
+<body>
+<script>
+    function Phone() {
+
+    }
+
+    Phone.prototype.size = '5.5inch'
+    Phone.name = '手机'
+    Phone.change = function () {
+        console.log('我可以改变世界！！！')
+    }
+
+    let nokia = new Phone();
+    console.log(nokia.name)
+    // 实例对象和函数对象的属性是不通的， 实例对象和构造函数原型对象上面是相通的
+    // nokia.change()
+    console.log(nokia.size)
+
+    class shouji {
+        //静态属性
+        static name = '手机'
+
+        static change() {
+            console.log('我可以改变世界！！！')
+        }
+    }
+
+    let vivo = new shouji();
+    console.log(vivo.name)
+    console.log(shouji.name)
+</script>
+</body>
+</html>
