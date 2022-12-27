@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象方法的扩展</title>
+</head>
+<body>
+<script>
+    const school = {
+        name: '北大',
+        cities: ['北京', '上海', '广州', '深圳'],
+        subjects: ['数学', '语文', '英语']
+    }
+    // 获取对象所有的键
+    console.log(Object.keys(school))
+
+    // 获取对象所有的值
+    console.log(Object.values(school))
+
+    console.log(Object.entries(school))
+
+    let map = new Map(Object.entries(school));
+    console.log(map.get('cities'))
+
+    // 对象属性的描述对象
+    console.log(Object.getOwnPropertyDescriptors(school))
+
+    const obj = Object.create(null, {
+        name: {'xiaoming': 'zs', daming: 'ls'},
+        writeable: true,
+        configurable: true,
+        enumerable: true
+    });
+    console.log(obj)
+</script>
+</body>
+</html>

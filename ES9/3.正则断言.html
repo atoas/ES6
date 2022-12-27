@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则断言</title>
+</head>
+<body>
+<script>
+    //声明字符串
+    let str = 'JS12231312哈哈哈2222哇哇'
+    // 正向断言  \d  匹配数字
+    const reg = /\d+(?=哇)/
+    const result = reg.exec(str);
+    console.log(result)
+
+    // 反向断言
+    const reg2 = /(?<=哈)\d+/
+    const result2 = reg2.exec(str);
+    console.log(result2)
+</script>
+</body>
+</html>

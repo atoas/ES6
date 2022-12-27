@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // ?.
+    function main(config) {
+        // const dbHost = config && config.db && config.db.host
+        const res = config?.db?.port
+        console.log(res)
+    }
+
+    main({
+        db: {
+            host: '127.0.0.1',
+            port: 3306
+        },
+        cache: {
+            host: 'localhost',
+            port: 8848
+        }
+    })
+
+</script>
+</body>
+</html>

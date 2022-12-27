@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 大整数
+    let n = 123n
+    console.log(n, typeof (n))
+
+    // 函数
+    let n2 = 124
+    console.log(BigInt(n2))
+
+    // 大数值运算
+    let max = Number.MAX_SAFE_INTEGER;
+    console.log(max)
+    console.log(max + 1)
+    console.log(max + 2)  // error
+
+    console.log(BigInt(max))
+    console.log(BigInt(max) + BigInt(1))
+    console.log(BigInt(max) + BigInt(2)) // true
+    console.log(BigInt(max) + BigInt(100)) // true
+</script>
+</body>
+</html>
