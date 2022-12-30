@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    img {
+        position: absolute;
+        width: 60px;
+        height: 50px;
+    }
+</style>
+<body>
+<img src="img/angel.gif" alt="">
+<script>
+    let img = document.querySelector('img');
+    document.addEventListener('mousemove', (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+        img.style.left = x - 20 + 'px'
+        img.style.top = y - 20 + 'px'
+    })
+
+    // document.addEventListener('keydown', (e) => {
+    //     console.log(e.key);
+    // })
+    document.onkeydown = (e) => {
+        console.log(e.key)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 1.  -->
+<!--<script>
+    let body = document.querySelector('body');
+    let div = document.createElement('div');
+    let date1 = new Date();
+    for (let i = 0; i < 1000; i++) {
+        div.innerHTML += '<a href="#">百度</a>'
+    }
+    body.appendChild(div)
+    let date2 = new Date();
+    console.log(date2 - date1)
+</script>-->
+
+<!--  2.  -->
+<!--<script>
+    let body = document.querySelector('body');
+    let date1 = new Date();
+    for (let i = 0; i < 1000; i++) {
+        let div = document.createElement('div');
+        div.innerHTML = '<a href="javascript:;">百度</a>'
+        body.appendChild(div)
+    }
+    let date2 = new Date();
+    console.log(date2 - date1)
+</script>-->
+
+<!--  3.  -->
+<!--<script>
+    let body = document.querySelector('body');
+    let date1 = new Date();
+    let arr = []
+    for (let i = 0; i < 1000; i++) {
+        arr.push('<a href="javascript:;">百度</a>')
+    }
+    body.innerHTML = arr.join(' ')
+    let date2 = new Date();
+    console.log(date2 - date1)
+</script>-->
+
+<!--
+    1. document.write 是直接将内容写入页面流，但是文档流执行完毕，则它会导致页面全部重绘
+    2. innerHTML 是将内容写入某个 DOM 节点，不会导致页面全部重绘
+    3. innerHTML 创建多个元素效率更高（不要拼接字符串，采取数组的形式拼接），结构稍微复杂
+    4. createElement() 创建多个元素效率稍微低一些，但是结构更清晰
+    总结： 不同浏览器下，innerHTML 效率要比 createElement 高
+-->
+</body>
+</html>

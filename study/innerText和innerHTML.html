@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div></div>
+<p>
+    我是p</br>
+    <span>123</span>
+</p>
+<script>
+    // innerText 和 innerHTML 的区别
+    // 1. innerText 不识别 HTML 标签  非标准 去除空格和换行
+    let div = document.querySelector('div');
+    // div.innerText = '<strong>This is div</strong>:come on'
+    // 2. innerHTML 识别HTML 标签  W3C标准 保留空格和换行
+    div.innerHTML = '<strong>This is div</strong>:come on'
+    // 这两个属性是可读写的  可以获取元素里面的内容
+    let p = document.querySelector('p');
+    console.log(p.innerText)
+    console.log(p.innerHTML)
+</script>
+</body>
+</html>

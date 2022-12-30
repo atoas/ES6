@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="https://www.baidu.com" id="bd">百度</a>
+<script>
+    let a = document.querySelector('#bd');
+    // 阻止默认行为（事件）让链接不跳转 或让提交按钮不提交
+    // a.addEventListener('click', (e) => {
+    //     // DOM 标准写法
+    //     e.preventDefault()
+    // })
+    // a.onclick = (e) => {
+    //     e.preventDefault()
+    // }
+    a.onclick = function () {
+        // return false 也能阻止默认行为 没有兼容性问题  只限于传统的注册方式
+        return false
+    }
+</script>
+</body>
+</html>

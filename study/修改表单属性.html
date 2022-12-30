@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>按钮</button>
+<script>
+    // 利用 DOM 可以操作如下表单元素的属性
+    // type  value  checked  selected  disabled
+    // 1. 获取元素
+    let btn = document.querySelector('button');
+    let input = document.querySelector('input');
+    // 2. 注册事件  处理程序
+    btn.onclick = function () {
+        input.value = '你好'
+        this.disabled = true
+        console.log(this)
+    }
+
+    // btn.onclick = () => {
+    //     input.value = '被点击了'
+    //     this.disabled = true
+    // this ->  window
+    //     console.log(this)
+    // }
+
+    /*
+        鼠标事件             触发条件
+        onclick             鼠标点击左键触发
+        onmouseover         鼠标经过触发
+        onmouseout          鼠标离开触发
+        onfocus             获得鼠标焦点触发
+        onblur              失去鼠标焦点触发
+        onmousemove         鼠标移动触发
+        onmouseup           鼠标弹起触发
+        onmousedown         鼠标按下触发
+        keyup               键盘弹起触发
+        keydown             键盘按下触发
+        keypress            键盘按下触发（不能识别功能键  如 Ctrl shift ） 晚于 keyup 触发
+    */
+</script>
+<label>
+    <input type="text" value="请输入内容">
+</label>
+</body>
+</html>

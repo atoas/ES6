@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+发送短消息<input type="text" style="margin-left: 10px">
+<button style="margin-left: 10px">发送</button>
+<script>
+    let btn = document.querySelector('button')
+    let time = 3
+    btn.addEventListener('click', () => {
+        btn.disabled = true
+        let timer = setInterval(() => {
+            if (time === 0) {
+                clearInterval(timer)
+                btn.disabled = false
+                btn.innerHTML = '发送'
+                time = 3
+            } else {
+                btn.innerHTML = '还剩下' + time + '秒'
+                time--
+            }
+        }, 1000)
+    })
+</script>
+
+<!--  bug  -->
+<!--<script>
+    let btn = document.querySelector('button')
+    let time = 3
+    btn.addEventListener('click', function () {
+        btn.disabled = true
+        let timer = setInterval(function () {
+            if (time === 0) {
+                clearInterval(timer)
+                btn.disabled = false
+                btn.innerHTML = '发送'
+                timer = 3
+            } else {
+                btn.innerHTML = '还剩下' + time + '秒'
+                time&#45;&#45;
+            }
+        }, 1000)
+    })
+</script>-->
+</body>
+
+</html>

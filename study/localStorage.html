@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>
+    <input type="text">
+</label>
+<button>添加</button>
+<button>获取</button>
+<button>删除</button>
+<button>清空</button>
+<script>
+    // 1. 生命周期永久生效，除非手动删除 否则关闭页面也会存在
+    // 2. 可以多窗口（页面）共享（同一浏览器可以共享）
+    // 3. 以键值对的形式存储共享
+    let ipt = document.querySelector('input');
+    let btn = document.querySelectorAll('button');
+    btn[0].addEventListener('click', () => {
+        localStorage.setItem('uname', ipt.value)
+    })
+    btn[1].addEventListener('click', () => {
+        alert(localStorage.getItem('uname'))
+    })
+    btn[2].addEventListener('click', () => {
+        localStorage.removeItem('uname')
+    })
+    btn[3].addEventListener('click', () => {
+        localStorage.clear()
+    })
+</script>
+</body>
+</html>

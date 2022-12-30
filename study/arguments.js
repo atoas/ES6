@@ -12,3 +12,10 @@ function fn() {
 // 1. 具有数组的 length 属性
 // 2. 按照索引的方式进行存储
 // 3. 它没有真正数组的一些方法 pop()  push() 等
+
+console.log(111)
+setTimeout(() => {
+    console.log(3333)
+}, 0)
+
+console.log(2222)
